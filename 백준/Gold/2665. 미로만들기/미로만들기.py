@@ -18,12 +18,12 @@ def hq(val, xy):
                     new_cost = cost + 1
                 else:
                     new_cost = cost
-                if dist[nx][ny] == -1 or dist[nx][ny] > tmp[0]:
-                    dist[nx][ny] = tmp[0]
+                if dist[nx][ny] == -1 or dist[nx][ny] > new_cost:
+                    dist[nx][ny] = new_cost
                     heapq.heappush(pq, [new_cost, [nx, ny]])
                 else:
-                    if dist[nx][ny] == -1 or dist[nx][ny] > tmp[0]:
-                        dist[nx][ny] = tmp[0]
+                    if dist[nx][ny] == -1 or dist[nx][ny] > new_cost:
+                        dist[nx][ny] = new_cost
                         heapq.heappush(pq, [new_cost, [nx, ny]])
 
 
